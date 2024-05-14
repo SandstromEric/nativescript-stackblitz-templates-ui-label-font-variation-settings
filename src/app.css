@@ -8,3 +8,8 @@
 Button.-primary {
   font-size: 18;
 }
+
+.mat-icon {
+    font-family: "Material Symbols Rounded", "MaterialSymbolsRounded";
+    font-size: 24;
+}

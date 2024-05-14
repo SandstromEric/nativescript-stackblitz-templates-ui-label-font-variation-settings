@@ -3,7 +3,9 @@
 <GridLayout>
   <ListView [items]="items">
     <ng-template let-item="item">
-      <StackLayout [nsRouterLink]="['/item', item.id]">
+      <StackLayout [nsRouterLink]="['/item', item.id]" orientation="horizontal">
+        <!-- MORE ICONS CAN BE FOUND AT https://fonts.google.com/icons?icon.size=24&icon.color=%23e8eaed&icon.style=Rounded -->
+        <Label text="&#xe838;" class="mat-icon" (loaded)="iconLoaded($event)"></Label>
         <Label [text]="item.name" class="text-lg text-gray-500 p-4"></Label>
       </StackLayout>
     </ng-template>
