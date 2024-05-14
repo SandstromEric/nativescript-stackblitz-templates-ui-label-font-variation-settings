@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { ItemsComponent } from './item/items.component'
 import { ItemDetailComponent } from './item/item-detail.component'
-
+import { registerElement } from '@nativescript/angular';
+registerElement('HTMLLabel', () => require('@nativescript-community/ui-label').Label);
 @NgModule({
   bootstrap: [AppComponent],
   imports: [NativeScriptModule, AppRoutingModule],

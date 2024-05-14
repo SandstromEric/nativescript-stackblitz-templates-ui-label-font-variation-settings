@@ -6,7 +6,8 @@
       <StackLayout [nsRouterLink]="['/item', item.id]" orientation="horizontal">
         <!-- MORE ICONS CAN BE FOUND AT https://fonts.google.com/icons?icon.size=24&icon.color=%23e8eaed&icon.style=Rounded -->
         <Label text="&#xe838;" class="mat-icon" (loaded)="iconLoaded($event)"></Label>
-        <Label [text]="item.name" class="text-lg text-gray-500 p-4"></Label>
+        <!-- ONCE HTML LABEL IS USED fontVariationSettings stops working; if you remove HTMLLABEL it works again. -->
+        <HTMLLabel [html]="item.name" fontFamily="OpenSans" fontSize="16"  textWrap="true"></HTMLLabel>
       </StackLayout>
     </ng-template>
   </ListView>
